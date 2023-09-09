@@ -1,0 +1,19 @@
+{
+  "name": "mod-fed-example",
+  "version": "1.0.0",
+  "description": "Example usage of Module Federation",
+  "main": "index.js",
+  "scripts": {
+    "dev:profile": "npm run dev --workspace=packages/profile",
+    "dev:savings": "npm run dev --workspace=packages/savings",
+    "dev": "concurrently 'npm run dev:profile' 'npm run dev:savings'"
+  },
+  "author": "Thayse Onofrio",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "8.2.1"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
