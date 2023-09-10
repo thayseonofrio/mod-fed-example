@@ -30,13 +30,6 @@ module.exports = {
     minimize: mode === "production",
   },
   plugins: [
-    new ModuleFederationPlugin({
-      name: "savings",
-      remotes: {
-        profile: "profile@http://localhost:3002/remoteEntry.js",
-      },
-      shared: ["react", "react-dom"],
-    }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
